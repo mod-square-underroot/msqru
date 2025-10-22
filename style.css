@@ -1,0 +1,152 @@
+/* Font + general setup */
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #d8c8c8;
+  font-family: 'Crimson Text', serif;
+  overflow-x: hidden;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/silhouette.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #d2b1b1;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #d2a24f;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 5rem 2rem;
+  background: #0e0e0e;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 230px;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.4);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c25b5b;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-item:hover .overlay-text {
+  opacity: 1;
+}
+
+/* About section */
+.about {
+  background: #111;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #181818;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(150, 0, 0, 0.3);
+}
+
+.about-image img {
+  width: 200px;
+  height: auto;
+  border: 2px solid #a14b4b;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #a7a7a7;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0a0a0a;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
